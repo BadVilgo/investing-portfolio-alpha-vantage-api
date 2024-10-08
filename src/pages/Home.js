@@ -8,7 +8,7 @@ function Home() {
         Click on Login or Register to get started. If you don't have an account,
         please register or use our demo account with login:{" "}
         <b>demo@demo.com </b>
-        and password: <b>demo</b>.
+        and password: <b>demo.com</b>.
       </p>
     </div>
   );
