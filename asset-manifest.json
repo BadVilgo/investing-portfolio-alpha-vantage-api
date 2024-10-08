@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/investing-portfolio-alpha-vantage-api/static/css/main.d0dc37f8.css",
-    "main.js": "/investing-portfolio-alpha-vantage-api/static/js/main.508533af.js",
+    "main.js": "/investing-portfolio-alpha-vantage-api/static/js/main.69972302.js",
     "static/js/453.1696dac1.chunk.js": "/investing-portfolio-alpha-vantage-api/static/js/453.1696dac1.chunk.js",
     "index.html": "/investing-portfolio-alpha-vantage-api/index.html",
     "main.d0dc37f8.css.map": "/investing-portfolio-alpha-vantage-api/static/css/main.d0dc37f8.css.map",
-    "main.508533af.js.map": "/investing-portfolio-alpha-vantage-api/static/js/main.508533af.js.map",
+    "main.69972302.js.map": "/investing-portfolio-alpha-vantage-api/static/js/main.69972302.js.map",
     "453.1696dac1.chunk.js.map": "/investing-portfolio-alpha-vantage-api/static/js/453.1696dac1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0dc37f8.css",
-    "static/js/main.508533af.js"
+    "static/js/main.69972302.js"
   ]
 }
