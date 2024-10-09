@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/investing-portfolio-alpha-vantage-api">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
