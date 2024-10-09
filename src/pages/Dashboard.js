@@ -23,7 +23,6 @@ function Dashboard() {
         <div className="w-100">
           {/* Pass a callback to get data from the Table */}
           <Table onTableDataChange={handleTableData} />
-          <SearchBar />
         </div>
 
         {/* Pass the tickers and percentages to the Chart component */}
