@@ -28,8 +28,6 @@ function Dashboard() {
         {/* Pass the tickers and percentages to the Chart component */}
         <Chart tickers={tickers} percentages={percentages} />
       </div>
-
-      <SaveBtn />
     </div>
   );
 }
