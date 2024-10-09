@@ -13,6 +13,11 @@ function Navbar() {
           </Link>
         </li>
         <li className="nav-item mr-3">
+          <Link className="nav-link btn btn-primary" to="/dashboard">
+            Dashboard
+          </Link>
+        </li>
+        <li className="nav-item mr-3">
           <Link className="nav-link btn btn-primary" to="/login">
             Login
           </Link>
@@ -22,11 +27,7 @@ function Navbar() {
             Register
           </Link>
         </li>
-        <li className="nav-item mr-3">
-          <Link className="nav-link btn btn-primary" to="/dashboard">
-            Dashboard
-          </Link>
-        </li>
+
         <li className="nav-item mr-3 h-100 align-self-center d-flex">
           <Logout />
         </li>
