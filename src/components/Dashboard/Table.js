@@ -179,8 +179,8 @@ function Table({ onTableDataChange }) {
   return (
     <div className="p-3">
       <SearchBar onAddStock={handleAddStock} />
-      <table className="table table-striped">
-        <thead>
+      <table className="table table-striped  table-responsive  table-hover">
+        <thead className="table-bordered w-100">
           <tr>
             <th scope="col">Ticker</th>
             <th scope="col">Name</th>
@@ -191,7 +191,7 @@ function Table({ onTableDataChange }) {
             <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="table-bordered w-100">
           {stockData.map((row, index) => (
             <tr key={index}>
               <th scope="row">{row.ticker}</th>

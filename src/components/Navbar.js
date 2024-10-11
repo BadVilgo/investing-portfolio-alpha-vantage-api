@@ -5,9 +5,9 @@ import Logout from "./Logout"; // Import the Logout component
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-light bg-light ">
+    <nav className="navbar navbar-light bg-light">
       <ul className="d-flex flex-row list-unstyled m-auto">
-        <li className="nav-item mr-3">
+        <li className="nav-item mr-3 ">
           <Link className="nav-link btn btn-primary" to="/">
             Home
           </Link>

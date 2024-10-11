@@ -54,11 +54,11 @@ function SearchBar({ onAddStock }) {
   }
 
   return (
-    <div className="">
+    <div className="w-50">
       <div className="input-group mb-3">
         <input
           type="text"
-          className="form-control"
+          className="form-control "
           placeholder="Search by name or ticker..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -66,9 +66,9 @@ function SearchBar({ onAddStock }) {
       </div>
       {searchResults.length > 0 && (
         <ul
-          className="list-group"
+          className="list-group mb-3 border z-3 position-absolute"
           style={{
-            maxHeight: "200px", // Adjust height as needed
+            maxHeight: "200px",
             overflowY: "auto",
           }}
         >

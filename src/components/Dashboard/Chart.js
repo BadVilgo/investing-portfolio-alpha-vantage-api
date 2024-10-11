@@ -97,9 +97,13 @@ function Chart({ tickers, percentages }) {
   };
 
   return (
-    <div>
-      <h3>Portfolio Distribution</h3>
-      <Pie data={data} options={options} />
+    <div className="d-flex justify-content-center align-items-center flex-column">
+      <div>
+        <h3>Portfolio Distribution</h3>
+      </div>
+      <div className="d-flex justify-content-center align-items-center">
+        <Pie data={data} options={options} className="" />
+      </div>
     </div>
   );
 }
