@@ -1,0 +1,83 @@
+/* Home.css */
+.home-background {
+  background: linear-gradient(to bottom, #065fe5, #01016b);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  padding: 5rem 0;
+  color: white;
+}
+
+.features-section,
+.faq-section {
+  min-height: 50vh;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  animation: move 20s infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.circle1 {
+  width: 500px;
+  height: 500px;
+  top: 10%;
+  left: -10%;
+}
+
+.circle2 {
+  width: 700px;
+  height: 700px;
+  bottom: -20%;
+  right: -15%;
+}
+
+.circle3 {
+  width: 400px;
+  height: 400px;
+  bottom: 55%;
+  right: -10%;
+}
+
+.circle4 {
+  width: 200px;
+  height: 200px;
+  bottom: 52%;
+  right: -5%;
+}
+
+.circle5 {
+  width: 700px;
+  height: 700px;
+  bottom: 20%;
+  left: -30%;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-50px) scale(1.2);
+  }
+}
+
+footer a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+footer a:hover {
+  color: #fff !important;
+  text-decoration: underline !important;
+}

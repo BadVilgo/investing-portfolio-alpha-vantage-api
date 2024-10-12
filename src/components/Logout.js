@@ -1,3 +1,4 @@
+// Logout.js
 import React from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebaseConfig";
@@ -8,16 +9,15 @@ function Logout() {
 
   const handleLogout = async () => {
     try {
-      await signOut(auth); // Sign out the user
-      console.log("User signed out");
-      navigate("/login"); // Redirect to login after logout
+      await signOut(auth);
+      navigate("/login");
     } catch (error) {
       console.error("Error logging out:", error);
     }
   };
 
   return (
-    <button className="btn btn-danger nav-link" onClick={handleLogout}>
+    <button className="nav-link btn btn-link" onClick={handleLogout}>
       Logout
     </button>
   );

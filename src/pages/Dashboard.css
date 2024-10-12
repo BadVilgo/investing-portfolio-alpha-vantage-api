@@ -1,0 +1,6 @@
+/* Dashboard.css */
+.dashboard-background {
+  background: linear-gradient(to bottom, #1369ea, #0e0eb8);
+  min-height: 100vh;
+  color: #fff;
+}

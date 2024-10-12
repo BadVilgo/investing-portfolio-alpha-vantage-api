@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+// Dashboard.js
+import React, { useState } from "react";
 import Table from "../components/Dashboard/Table";
 import Chart from "../components/Dashboard/Chart";
-import SearchBar from "../components/Dashboard/SearchBar";
+import "./Dashboard.css";
 
 function Dashboard() {
   const [tickers, setTickers] = useState([]);
   const [percentages, setPercentages] = useState([]);
 
-  // Example of how you would get data from Table component
   const handleTableData = (data) => {
     const tickersData = data.map((row) => row.ticker);
     const percentagesData = data.map((row) => row.percentage);
@@ -16,14 +16,16 @@ function Dashboard() {
   };
 
   return (
-    <div className="text-center">
-      <h1 className="m-3">Dashboard</h1>
-      <div className="d-flex align-items-center justify-content-center vw-100">
-        <div className="w-75 align-self-right d-flex">
-          <Table onTableDataChange={handleTableData} />
-        </div>
-        <div className="w-25 align-self-left d-flex">
-          <Chart tickers={tickers} percentages={percentages} />
+    <div className="dashboard-background  ">
+      <div className="container py-5">
+        <h1 className="text-center mb-5">Your Investment Dashboard</h1>
+        <div className="row">
+          <div className="col-md-8">
+            <Table onTableDataChange={handleTableData} />
+          </div>
+          <div className="col-md-4">
+            <Chart tickers={tickers} percentages={percentages} />
+          </div>
         </div>
       </div>
     </div>

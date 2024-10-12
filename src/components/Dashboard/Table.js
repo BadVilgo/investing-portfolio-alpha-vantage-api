@@ -179,7 +179,7 @@ function Table({ onTableDataChange }) {
   return (
     <div className="p-3">
       <SearchBar onAddStock={handleAddStock} />
-      <table className="table table-striped  table-responsive  table-hover">
+      <table className="table table-striped table-responsive table-hover bg-white p-3 shadow rounded-3">
         <thead className="table-bordered w-100">
           <tr>
             <th scope="col">Ticker</th>
@@ -191,34 +191,43 @@ function Table({ onTableDataChange }) {
             <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody className="table-bordered w-100">
-          {stockData.map((row, index) => (
-            <tr key={index}>
-              <th scope="row">{row.ticker}</th>
-              <td>{row.name}</td>
-              <td>${Number(row.price).toFixed(2)}</td>
-              <td className="w-25">
-                <input
-                  type="number"
-                  className="form-control"
-                  placeholder="Add quantity"
-                  value={row.quantity}
-                  onChange={(e) => handleQuantityChange(index, e.target.value)}
-                ></input>
-              </td>
-              <td>${Number(row.value).toFixed(2)}</td>
-              <td>{row.percentage}%</td>
-              <td>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => handleRemoveStock(index)}
-                >
-                  Remove
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+        <div
+          style={{
+            maxHeight: "317px",
+            overflowY: "auto",
+          }}
+        >
+          <tbody className="table-bordered w-100">
+            {stockData.map((row, index) => (
+              <tr key={index}>
+                <th scope="row">{row.ticker}</th>
+                <td>{row.name}</td>
+                <td>${Number(row.price).toFixed(2)}</td>
+                <td className="w-25">
+                  <input
+                    type="number"
+                    className="form-control"
+                    placeholder="Add quantity"
+                    value={row.quantity}
+                    onChange={(e) =>
+                      handleQuantityChange(index, e.target.value)
+                    }
+                  ></input>
+                </td>
+                <td>${Number(row.value).toFixed(2)}</td>
+                <td>{row.percentage}%</td>
+                <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => handleRemoveStock(index)}
+                  >
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </div>
       </table>
     </div>
   );
