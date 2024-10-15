@@ -54,8 +54,8 @@ function SearchBar({ onAddStock }) {
   }
 
   return (
-    <div className="w-50 bg-white  shadow rounded-5">
-      <div className="input-group mb-3">
+    <div className="w-100 bg-white  shadow rounded-2">
+      <div className="input-group mb-3 w-100">
         <input
           type="text"
           className="form-control "

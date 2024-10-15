@@ -4,3 +4,76 @@
   min-height: 100vh;
   color: #fff;
 }
+
+.table-responsive {
+  border: 10px solid #fff;
+  border-radius: 10px;
+  border-top: none !important;
+  border-bottom: none !important;
+  margin-top: -4px;
+}
+
+.table {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 1200px) {
+  .table-responsive {
+  }
+}
+
+@media (max-width: 430px) {
+  .table-searchbar {
+    width: 97vw !important;
+  }
+
+  .table-all {
+    width: 100% !important;
+    font-size: 0.6rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .btn {
+    font-size: 0.6rem !important;
+    padding: 0.3rem 0.2rem !important;
+  }
+
+  .form-control {
+    font-size: 0.6rem !important;
+  }
+
+  td {
+    padding: 0.1rem 0.2rem !important;
+    max-width: 0.2rem !important;
+  }
+  td input {
+    max-width: 2.8rem !important;
+    max-height: 1.5rem !important;
+  }
+  /* For Chrome, Safari, Edge, and Opera */
+  td input[type="number"]::-webkit-outer-spin-button,
+  td input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* For Firefox */
+  td input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  th {
+    padding: 0.2rem !important;
+  }
+
+  h1 {
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+}

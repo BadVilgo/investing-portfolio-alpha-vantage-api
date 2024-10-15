@@ -177,33 +177,28 @@ function Table({ onTableDataChange }) {
   }
 
   return (
-    <div className="p-3">
+    <div className="table-searchbar p-2">
       <SearchBar onAddStock={handleAddStock} />
-      <table className="table table-striped table-responsive table-hover bg-white p-3 shadow rounded-3">
-        <thead className="table-bordered w-100">
-          <tr>
-            <th scope="col">Ticker</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Value</th>
-            <th scope="col">% of Portfolio</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <div
-          style={{
-            maxHeight: "317px",
-            overflowY: "auto",
-          }}
-        >
-          <tbody className="table-bordered w-100">
+      <div className="table-responsive" style={{ maxHeight: "400px" }}>
+        <table className="table table-striped table-hover  ">
+          <thead className="">
+            <tr>
+              <th scope="col">Ticker</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Value</th>
+              <th scope="col">% of Portfolio</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody className="">
             {stockData.map((row, index) => (
               <tr key={index}>
                 <th scope="row">{row.ticker}</th>
                 <td>{row.name}</td>
                 <td>${Number(row.price).toFixed(2)}</td>
-                <td className="w-25">
+                <td className="">
                   <input
                     type="number"
                     className="form-control"
@@ -227,8 +222,8 @@ function Table({ onTableDataChange }) {
               </tr>
             ))}
           </tbody>
-        </div>
-      </table>
+        </table>
+      </div>
     </div>
   );
 }

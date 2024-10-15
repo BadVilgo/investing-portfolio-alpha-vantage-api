@@ -80,29 +80,30 @@ function Chart({ tickers, percentages }) {
     ],
   };
 
-  // Disable animations in the chart options
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     animation: {
-      duration: 1000, // Disable general animation
-    },
-    hover: {
-      animationDuration: 1000, // Disable hover animation
+      duration: 1000,
     },
     plugins: {
       tooltip: {
-        enabled: true, // Tooltips enabled
-        animation: true, // Disable tooltip animations
+        enabled: true,
+        animation: true,
       },
     },
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center flex-column ">
+    <div className="d-flex justify-content-center align-items-center flex-column">
       <div className="text-center">
         <h3>Portfolio Distribution</h3>
       </div>
-      <div className="d-flex justify-content-center align-items-center bg-white p-5 mt-4 shadow rounded-3">
-        <Pie data={data} options={options} className="" />
+      <div
+        className="d-flex justify-content-center align-items-center bg-white p-5 mt-3 shadow rounded-3"
+        style={{ width: "100%", height: "400px" }}
+      >
+        <Pie data={data} options={options} />
       </div>
     </div>
   );

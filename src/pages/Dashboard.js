@@ -16,14 +16,14 @@ function Dashboard() {
   };
 
   return (
-    <div className="dashboard-background  ">
+    <div className="dashboard-background">
       <div className="container py-5">
         <h1 className="text-center mb-5">Your Investment Dashboard</h1>
-        <div className="row">
-          <div className="col-md-8">
+        <div className="row align-items-start">
+          <div className="table-all col-12 col-md-8">
             <Table onTableDataChange={handleTableData} />
           </div>
-          <div className="col-md-4">
+          <div className="chart-all col-12 col-md-4">
             <Chart tickers={tickers} percentages={percentages} />
           </div>
         </div>
