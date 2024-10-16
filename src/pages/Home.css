@@ -95,7 +95,7 @@ footer a:hover {
   background-color: rgba(226, 226, 226, 0.313);
 }
 
-@media (max-width: 430px) {
+@media (max-width: 576px) {
   .order-on-mobile-1 {
     order: 1;
   }

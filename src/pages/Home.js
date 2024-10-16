@@ -44,14 +44,14 @@ function Home() {
       <div className="features-section container text-white ">
         <div className="row align-items-center ">
           {/* Feature 1 */}
-          <div className="col-md-6 feature">
+          <div className="col-md-6  feature">
             <img
               src={realTimeImage}
               alt="Real-Time Stock Updates"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 feature">
+          <div className="col-md-6 feature mb-5 mb-md-0">
             <h3>Real-Time Stock Updates</h3>
             <p>
               Keep your finger on the pulse of the market. Our platform pulls
@@ -61,7 +61,7 @@ function Home() {
           </div>
 
           {/* Feature 2 */}
-          <div className="col-md-6 feature order-on-mobile-2">
+          <div className="col-md-6 feature order-on-mobile-2 ">
             <h3>Effortless Portfolio Management</h3>
             <p>
               Add, remove, and update your stocks with just a few clicks. Track
@@ -69,7 +69,7 @@ function Home() {
               holding with ease.
             </p>
           </div>
-          <div className="col-md-6 feature order-on-mobile-1">
+          <div className="col-md-6 feature order-on-mobile-1 ">
             <img
               src={visualInsightsImage}
               alt="Effortless Portfolio Management"
@@ -85,7 +85,7 @@ function Home() {
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 feature">
+          <div className="col-md-6 feature mb-5 mb-md-0">
             <h3>Visual Insights at a Glance</h3>
             <p>
               Get a clear view of your portfolio breakdown with a dynamic
@@ -95,7 +95,7 @@ function Home() {
           </div>
 
           {/* Feature 4 */}
-          <div className="col-md-6 feature order-on-mobile-1">
+          <div className="col-md-6 feature order-on-mobile-1 mb-5 mb-md-0">
             <h3>Personalized Investment Analysis</h3>
             <p>
               Monitor the percentage of each stock in your portfolio and make
