@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/investing-portfolio-alpha-vantage-api/static/css/main.16072291.css",
-    "main.js": "/investing-portfolio-alpha-vantage-api/static/js/main.d410682d.js",
+    "main.css": "/investing-portfolio-alpha-vantage-api/static/css/main.5a3ac916.css",
+    "main.js": "/investing-portfolio-alpha-vantage-api/static/js/main.83307989.js",
     "static/js/453.1696dac1.chunk.js": "/investing-portfolio-alpha-vantage-api/static/js/453.1696dac1.chunk.js",
     "static/media/real-time-update.jpg": "/investing-portfolio-alpha-vantage-api/static/media/real-time-update.4c0c7066193d4581b0d4.jpg",
     "static/media/investment-analysis.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/investment-analysis.6be795ed6c95f2899175.jpeg",
@@ -11,12 +11,12 @@
     "static/media/bootstrap-icons.woff?": "/investing-portfolio-alpha-vantage-api/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/investing-portfolio-alpha-vantage-api/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/investing-portfolio-alpha-vantage-api/index.html",
-    "main.16072291.css.map": "/investing-portfolio-alpha-vantage-api/static/css/main.16072291.css.map",
-    "main.d410682d.js.map": "/investing-portfolio-alpha-vantage-api/static/js/main.d410682d.js.map",
+    "main.5a3ac916.css.map": "/investing-portfolio-alpha-vantage-api/static/css/main.5a3ac916.css.map",
+    "main.83307989.js.map": "/investing-portfolio-alpha-vantage-api/static/js/main.83307989.js.map",
     "453.1696dac1.chunk.js.map": "/investing-portfolio-alpha-vantage-api/static/js/453.1696dac1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.16072291.css",
-    "static/js/main.d410682d.js"
+    "static/css/main.5a3ac916.css",
+    "static/js/main.83307989.js"
   ]
 }
