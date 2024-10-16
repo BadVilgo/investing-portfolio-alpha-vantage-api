@@ -18,6 +18,10 @@
   min-height: 50vh;
 }
 
+.feature {
+  margin-bottom: 3rem;
+}
+
 .circle {
   position: absolute;
   border-radius: 50%;
@@ -104,5 +108,9 @@ footer a:hover {
   .hero-copy {
     margin-top: -440px !important;
     margin-left: 10px !important;
+  }
+  .feature {
+    margin-bottom: 1.2rem;
+    text-align: center;
   }
 }

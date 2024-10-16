@@ -41,17 +41,17 @@ function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="features-section container text-white my-5">
-        <div className="row align-items-center my-5">
+      <div className="features-section container text-white ">
+        <div className="row align-items-center ">
           {/* Feature 1 */}
-          <div className="col-md-6 mb-5">
+          <div className="col-md-6 feature">
             <img
               src={realTimeImage}
               alt="Real-Time Stock Updates"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 mb-5">
+          <div className="col-md-6 feature">
             <h3>Real-Time Stock Updates</h3>
             <p>
               Keep your finger on the pulse of the market. Our platform pulls
@@ -61,7 +61,7 @@ function Home() {
           </div>
 
           {/* Feature 2 */}
-          <div className="col-md-6 mb-5 order-on-mobile-2">
+          <div className="col-md-6 feature order-on-mobile-2">
             <h3>Effortless Portfolio Management</h3>
             <p>
               Add, remove, and update your stocks with just a few clicks. Track
@@ -69,7 +69,7 @@ function Home() {
               holding with ease.
             </p>
           </div>
-          <div className="col-md-6 mb-5 order-on-mobile-1">
+          <div className="col-md-6 feature order-on-mobile-1">
             <img
               src={visualInsightsImage}
               alt="Effortless Portfolio Management"
@@ -78,14 +78,14 @@ function Home() {
           </div>
 
           {/* Feature 3 */}
-          <div className="col-md-6 mb-5">
+          <div className="col-md-6 feature">
             <img
               src={portfolioManagementImage}
               alt="Visual Insights at a Glance"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 mb-5">
+          <div className="col-md-6 feature">
             <h3>Visual Insights at a Glance</h3>
             <p>
               Get a clear view of your portfolio breakdown with a dynamic
@@ -95,7 +95,7 @@ function Home() {
           </div>
 
           {/* Feature 4 */}
-          <div className="col-md-6 mb-5 order-on-mobile-1">
+          <div className="col-md-6 feature order-on-mobile-1">
             <h3>Personalized Investment Analysis</h3>
             <p>
               Monitor the percentage of each stock in your portfolio and make
@@ -103,7 +103,7 @@ function Home() {
               conditions change.
             </p>
           </div>
-          <div className="col-md-6 mb-5 order-on-mobile-1">
+          <div className="col-md-6 feature order-on-mobile-1">
             <img
               src={investmentAnalysis}
               alt="Personalized Investment Analysis"
@@ -116,7 +116,7 @@ function Home() {
       </div>
 
       {/* Q&A Section */}
-      <div className="faq-section container my-5 text-white">
+      <div className="faq-section container  text-white">
         <h2 className="text-center mb-4">Frequently Asked Questions</h2>
         <div className="accordion w-75" id="faqAccordion">
           {/* Question 1 */}
@@ -289,7 +289,7 @@ function Home() {
       </div>
 
       {/* Call to Action */}
-      <div className="container my-5 text-center text-white">
+      <div className="cta-section container text-center text-white">
         <h2>Ready to Transform Your Investment Strategy?</h2>
         <p>Join us today and take control of your financial future.</p>
         <Link to="/dashboard" className="btn btn-primary btn-lg">
