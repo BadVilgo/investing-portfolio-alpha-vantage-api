@@ -17,9 +17,9 @@ function Logout() {
   };
 
   return (
-    <button className="nav-link btn btn-link" onClick={handleLogout}>
+    <li className="nav-link" onClick={handleLogout}>
       Logout
-    </button>
+    </li>
   );
 }
 
