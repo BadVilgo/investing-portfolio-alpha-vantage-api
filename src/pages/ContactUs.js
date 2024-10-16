@@ -14,7 +14,7 @@ function ContactUs() {
         <form
           action="https://formspree.io/f/your-form-id"
           method="POST"
-          className="mx-auto"
+          className="mx-auto w-75"
           style={{ maxWidth: "600px" }}
         >
           <div className="mb-3">

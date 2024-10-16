@@ -31,15 +31,15 @@
 .circle1 {
   width: 500px;
   height: 500px;
-  top: 10%;
+  top: 8%;
   left: -10%;
 }
 
 .circle2 {
   width: 700px;
   height: 700px;
-  bottom: -20%;
-  right: -15%;
+  bottom: -10%;
+  right: -30%;
 }
 
 .circle3 {
@@ -60,7 +60,7 @@
   width: 700px;
   height: 700px;
   bottom: 20%;
-  left: -30%;
+  left: -35%;
 }
 
 @keyframes move {
@@ -86,4 +86,25 @@ footer a:hover {
   border: 2px solid #fff;
   border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-body {
+  background-color: rgba(226, 226, 226, 0.313);
+}
+
+.hero-img {
+  position: relative !important;
+}
+
+.hero-img::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #01016b !important;
+  opacity: 0.5 !important; /* Adjust opacity to control how much blue you mix in */
+  pointer-events: none !important; /* Ensure the overlay doesn't block interactions */
+  z-index: 5 !important;
 }
