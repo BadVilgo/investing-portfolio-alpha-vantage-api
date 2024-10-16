@@ -35,7 +35,7 @@
     display: flex !important;
     flex-direction: column !important;
   }
-  .btn {
+  .dashboard-background .btn {
     font-size: 0.6rem !important;
     padding: 0.3rem 0.2rem !important;
   }
