@@ -96,13 +96,10 @@ function Chart({ tickers, percentages }) {
 
   return (
     <div className="d-flex justify-content-center align-items-center flex-column">
-      <div className="text-center">
+      <div className="text-center my-4 my-md-0">
         <h3>Portfolio Distribution</h3>
       </div>
-      <div
-        className="d-flex justify-content-center align-items-center bg-white p-5 mt-3 shadow rounded-3"
-        style={{ width: "100%", height: "400px" }}
-      >
+      <div className="chart-pie d-flex justify-content-center align-items-center bg-white p-4 p-md-5 mt-3 shadow rounded-3">
         <Pie data={data} options={options} />
       </div>
     </div>
