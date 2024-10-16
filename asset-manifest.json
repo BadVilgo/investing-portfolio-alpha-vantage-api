@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/investing-portfolio-alpha-vantage-api/static/css/main.852aad93.css",
-    "main.js": "/investing-portfolio-alpha-vantage-api/static/js/main.42dc6458.js",
+    "main.css": "/investing-portfolio-alpha-vantage-api/static/css/main.a08fcdc2.css",
+    "main.js": "/investing-portfolio-alpha-vantage-api/static/js/main.4a5c9685.js",
     "static/js/453.1696dac1.chunk.js": "/investing-portfolio-alpha-vantage-api/static/js/453.1696dac1.chunk.js",
+    "static/media/real-time-update.jpg": "/investing-portfolio-alpha-vantage-api/static/media/real-time-update.4c0c7066193d4581b0d4.jpg",
+    "static/media/investment-analysis.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/investment-analysis.6be795ed6c95f2899175.jpeg",
+    "static/media/portfolio-management.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/portfolio-management.802f6842d69062e066be.jpeg",
+    "static/media/Dashboard.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/Dashboard.d2ed6be8a42c2c30f1d9.jpeg",
+    "static/media/visual-insights.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/visual-insights.cfc5bf31e066c993bbbf.jpeg",
     "static/media/bootstrap-icons.woff?": "/investing-portfolio-alpha-vantage-api/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/investing-portfolio-alpha-vantage-api/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
-    "static/media/Dashboard.png": "/investing-portfolio-alpha-vantage-api/static/media/Dashboard.ea4833d9326da46b3dab.png",
     "index.html": "/investing-portfolio-alpha-vantage-api/index.html",
-    "main.852aad93.css.map": "/investing-portfolio-alpha-vantage-api/static/css/main.852aad93.css.map",
-    "main.42dc6458.js.map": "/investing-portfolio-alpha-vantage-api/static/js/main.42dc6458.js.map",
+    "main.a08fcdc2.css.map": "/investing-portfolio-alpha-vantage-api/static/css/main.a08fcdc2.css.map",
+    "main.4a5c9685.js.map": "/investing-portfolio-alpha-vantage-api/static/js/main.4a5c9685.js.map",
     "453.1696dac1.chunk.js.map": "/investing-portfolio-alpha-vantage-api/static/js/453.1696dac1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.852aad93.css",
-    "static/js/main.42dc6458.js"
+    "static/css/main.a08fcdc2.css",
+    "static/js/main.4a5c9685.js"
   ]
 }
