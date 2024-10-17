@@ -10,27 +10,24 @@ const ProtectedRoute = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log("Auth state changed:", user); // Log auth state
+      console.log("Auth state changed:", user);
 
       if (user) {
         console.log("User is authenticated:", user);
-        setAuthenticated(true); // User is logged in
+        setAuthenticated(true);
       } else {
         console.log("User is not authenticated, redirecting to login");
-        setAuthenticated(false); // User is logged out
-        navigate("/login"); // Redirect to login if not authenticated
+        setAuthenticated(false);
+        navigate("/login");
       }
-      setLoading(false); // Finish loading after state is set
+      setLoading(false);
     });
 
-    // Cleanup subscription on unmount
     return () => unsubscribe();
   }, [navigate]);
 
-  // Show loading screen while checking auth state
   if (loading) return <div>Loading...</div>;
 
-  // If authenticated, show the protected content (Dashboard)
   return authenticated ? children : null;
 };
 

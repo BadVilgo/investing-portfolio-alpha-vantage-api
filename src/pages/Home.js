@@ -10,14 +10,12 @@ import investmentAnalysis from "../assets/images/investment-analysis.jpeg";
 function Home() {
   return (
     <div className="home-background">
-      {/* Moving Circles */}
       <div className="circle circle1"></div>
       <div className="circle circle2"></div>
       <div className="circle circle3"></div>
       <div className="circle circle4"></div>
       <div className="circle circle5"></div>
 
-      {/* Hero Section */}
       <div className="container text-white hero-section">
         <div className="row align-items-center min-vh-100">
           <div className="hero-copy col-md-6 order-on-mobile-2">
@@ -111,8 +109,6 @@ function Home() {
             />
           </div>
         </div>
-
-        {/* Other feature sections omitted for brevity */}
       </div>
 
       {/* Q&A Section */}
@@ -288,7 +284,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Call to Action */}
+      {/* Call to Action section - I have to add some information here laterr */}
       <div className="cta-section container text-center text-white">
         <h2>Ready to Transform Your Investment Strategy?</h2>
         <p>Join us today and take control of your financial future.</p>

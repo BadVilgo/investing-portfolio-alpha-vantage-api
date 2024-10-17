@@ -20,16 +20,13 @@
   margin-bottom: 0 !important;
 }
 
-/* Add this to Dashboard.css */
-
 .table thead th {
   position: sticky;
   top: -1px;
-  background-color: #f8f9fa; /* Ensure the header has a background */
-  z-index: 2; /* Ensure the header stays above the table body */
+  background-color: #f8f9fa;
+  z-index: 2;
 }
 
-/* Optional: Add a box-shadow to the header for better visibility */
 .table thead th {
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
@@ -90,12 +87,4 @@
     width: 90vw;
     height: 320px;
   }
-
-  /* Optional: Hide less important columns */
-  /*
-  .table th:nth-child(2),
-  .table td:nth-child(2) {
-    display: none;
-  }
-  */
 }

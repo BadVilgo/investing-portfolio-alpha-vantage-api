@@ -1,4 +1,3 @@
-// Dashboard.js
 import React, { useState } from "react";
 import Table from "../components/Dashboard/Table";
 import Chart from "../components/Dashboard/Chart";

@@ -29,4 +29,4 @@ npm start
 
 ## Additional info
 
-Original API was changed to diffrent one to get more daily requests.
+Original Alpha Vantage API was changed to Twelve Data API to get more daily requests.

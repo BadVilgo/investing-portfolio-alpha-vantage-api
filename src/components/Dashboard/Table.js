@@ -57,7 +57,6 @@ function Table({ onTableDataChange }) {
     prevStockData.current = stockData;
   }, [stockData, onTableDataChange]);
 
-  // Fetch latest prices from Twelve Data API
   useEffect(() => {
     async function fetchPrices() {
       const symbols = stockData.map((stock) => stock.ticker).join(",");
@@ -150,7 +149,6 @@ function Table({ onTableDataChange }) {
 
   function handleAddStock(stock) {
     setStockData((prevStockData) => {
-      // Check if the stock already exists
       const existingStock = prevStockData.find(
         (item) => item.ticker === stock.ticker
       );
