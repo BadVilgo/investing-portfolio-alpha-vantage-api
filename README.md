@@ -4,7 +4,7 @@ https://badvilgo.github.io/investing-portfolio-alpha-vantage-api/
 
 ## App usage
 
-Login using provided login or password or create new account to see the DASHBOARD.
+Log in using provided login or password or create new account to see the DASHBOARD.
 
 ## App description
 
