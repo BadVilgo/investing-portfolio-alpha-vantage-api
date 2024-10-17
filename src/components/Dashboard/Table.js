@@ -179,50 +179,52 @@ function Table({ onTableDataChange }) {
   return (
     <div className="table-searchbar p-2">
       <SearchBar onAddStock={handleAddStock} />
-      <div className="table-responsive" style={{ maxHeight: "400px" }}>
-        <table className="table table-striped table-hover  ">
-          <thead className="">
-            <tr>
-              <th scope="col">Ticker</th>
-              <th scope="col">Name</th>
-              <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Value</th>
-              <th scope="col">% of Portfolio</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody className="">
-            {stockData.map((row, index) => (
-              <tr key={index}>
-                <th scope="row">{row.ticker}</th>
-                <td>{row.name}</td>
-                <td>${Number(row.price).toFixed(2)}</td>
-                <td className="">
-                  <input
-                    type="number"
-                    className="form-control"
-                    placeholder="Add quantity"
-                    value={row.quantity}
-                    onChange={(e) =>
-                      handleQuantityChange(index, e.target.value)
-                    }
-                  ></input>
-                </td>
-                <td>${Number(row.value).toFixed(2)}</td>
-                <td>{row.percentage}%</td>
-                <td>
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => handleRemoveStock(index)}
-                  >
-                    Remove
-                  </button>
-                </td>
+      <div className="table-container">
+        <div className="table-responsive" style={{ maxHeight: "400px" }}>
+          <table className="table table-striped table-hover  ">
+            <thead className="">
+              <tr>
+                <th scope="col">Ticker</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Value</th>
+                <th scope="col">% of Portfolio</th>
+                <th scope="col">Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="">
+              {stockData.map((row, index) => (
+                <tr key={index}>
+                  <th scope="row">{row.ticker}</th>
+                  <td>{row.name}</td>
+                  <td>${Number(row.price).toFixed(2)}</td>
+                  <td className="">
+                    <input
+                      type="number"
+                      className="form-control"
+                      placeholder="Add quantity"
+                      value={row.quantity}
+                      onChange={(e) =>
+                        handleQuantityChange(index, e.target.value)
+                      }
+                    ></input>
+                  </td>
+                  <td>${Number(row.value).toFixed(2)}</td>
+                  <td>{row.percentage}%</td>
+                  <td>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => handleRemoveStock(index)}
+                    >
+                      Remove
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
