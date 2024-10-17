@@ -19,7 +19,7 @@ Search for stocks, add them to your investing wallet. Observe how value and expo
 - HTML&CSS for styling,
 - GIT for version controll
 
-### To run locally
+## To run locally
 
 git clone
 npm install
@@ -27,6 +27,6 @@ npm start
 
 // npm run deploy - for gh pages
 
-### Additional info
+## Additional info
 
 Original API was changed to diffrent one to get more daily requests.
