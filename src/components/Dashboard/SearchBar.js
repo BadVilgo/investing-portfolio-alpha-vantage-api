@@ -70,6 +70,7 @@ function SearchBar({ onAddStock }) {
           style={{
             maxHeight: "200px",
             overflowY: "auto",
+            maxWidth: "90vw",
           }}
         >
           {searchResults.map((result, index) => (
