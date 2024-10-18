@@ -11,7 +11,7 @@ function ContactUs() {
           form below and we'll get back to you as soon as possible.
         </p>
         <form
-          action="https://formspree.io/f/your-form-id"
+          action="https://formspree.io/f/xkgnnanr"
           method="POST"
           className="mx-auto w-75"
           style={{ maxWidth: "600px" }}
