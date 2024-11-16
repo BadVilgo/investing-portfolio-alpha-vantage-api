@@ -12,7 +12,7 @@ import investmentAnalysis from "../assets/images/investment-analysis.jpeg";
 function Home() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 750,
       once: true,
       mirror: false,
     });
@@ -80,6 +80,7 @@ function Home() {
               src={realTimeImage}
               alt="Real-Time Stock Updates"
               className="img-fluid"
+              loading="lazy"
             />
           </div>
           <div
@@ -117,6 +118,7 @@ function Home() {
               src={visualInsightsImage}
               alt="Effortless Portfolio Management"
               className="img-fluid"
+              loading="lazy"
             />
           </div>
 
@@ -130,6 +132,7 @@ function Home() {
               src={portfolioManagementImage}
               alt="Visual Insights at a Glance"
               className="img-fluid"
+              loading="lazy"
             />
           </div>
           <div
@@ -167,6 +170,7 @@ function Home() {
               src={investmentAnalysis}
               alt="Personalized Investment Analysis"
               className="img-fluid"
+              loading="lazy"
             />
           </div>
         </div>
