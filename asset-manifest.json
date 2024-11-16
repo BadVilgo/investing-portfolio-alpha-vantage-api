@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/investing-portfolio-alpha-vantage-api/static/css/main.fd035ca2.css",
-    "main.js": "/investing-portfolio-alpha-vantage-api/static/js/main.df21d96b.js",
+    "main.js": "/investing-portfolio-alpha-vantage-api/static/js/main.7e059b9f.js",
     "static/js/453.1696dac1.chunk.js": "/investing-portfolio-alpha-vantage-api/static/js/453.1696dac1.chunk.js",
-    "static/media/real-time-update.jpg": "/investing-portfolio-alpha-vantage-api/static/media/real-time-update.4c0c7066193d4581b0d4.jpg",
     "static/media/investment-analysis.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/investment-analysis.6be795ed6c95f2899175.jpeg",
+    "static/media/real-time-update.jpg": "/investing-portfolio-alpha-vantage-api/static/media/real-time-update.e81fb858cb4d5a9839ac.jpg",
     "static/media/portfolio-management.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/portfolio-management.802f6842d69062e066be.jpeg",
     "static/media/Dashboard.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/Dashboard.d2ed6be8a42c2c30f1d9.jpeg",
     "static/media/visual-insights.jpeg": "/investing-portfolio-alpha-vantage-api/static/media/visual-insights.cfc5bf31e066c993bbbf.jpeg",
@@ -12,11 +12,11 @@
     "static/media/bootstrap-icons.woff2?": "/investing-portfolio-alpha-vantage-api/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/investing-portfolio-alpha-vantage-api/index.html",
     "main.fd035ca2.css.map": "/investing-portfolio-alpha-vantage-api/static/css/main.fd035ca2.css.map",
-    "main.df21d96b.js.map": "/investing-portfolio-alpha-vantage-api/static/js/main.df21d96b.js.map",
+    "main.7e059b9f.js.map": "/investing-portfolio-alpha-vantage-api/static/js/main.7e059b9f.js.map",
     "453.1696dac1.chunk.js.map": "/investing-portfolio-alpha-vantage-api/static/js/453.1696dac1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd035ca2.css",
-    "static/js/main.df21d96b.js"
+    "static/js/main.7e059b9f.js"
   ]
 }
