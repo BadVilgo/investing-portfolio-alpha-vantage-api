@@ -1,27 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
-import { auth } from "../firebaseConfig";
-import { onAuthStateChanged } from "firebase/auth";
+import { useAuth } from "../hooks/useAuth";
 import "./Navbar.css";
 
 function Navbar() {
-  const [user, setUser] = useState(null);
+  const { user } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  const handleLinkClick = () => {
-    if (isOpen) {
-      setIsOpen(false);
-    }
-  };
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,60 +27,41 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
-          id="navbarNav"
-        >
+        <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={handleLinkClick}>
+              <Link className="nav-link" to="/" onClick={closeMenu}>
                 Home
               </Link>
             </li>
             {user && (
               <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  to="/dashboard"
-                  onClick={handleLinkClick}
-                >
+                <Link className="nav-link" to="/dashboard" onClick={closeMenu}>
                   Dashboard
                 </Link>
               </li>
             )}
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                to="/contact"
-                onClick={handleLinkClick}
-              >
+              <Link className="nav-link" to="/contact" onClick={closeMenu}>
                 Contact Us
               </Link>
             </li>
             {!user ? (
               <>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    to="/login"
-                    onClick={handleLinkClick}
-                  >
+                  <Link className="nav-link" to="/login" onClick={closeMenu}>
                     Login
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    to="/register"
-                    onClick={handleLinkClick}
-                  >
+                  <Link className="nav-link" to="/register" onClick={closeMenu}>
                     Register
                   </Link>
                 </li>
               </>
             ) : (
               <li className="nav-item">
-                <Logout onClick={handleLinkClick} />{" "}
+                <Logout onClick={closeMenu} />
               </li>
             )}
           </ul>

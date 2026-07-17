@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,173 +20,107 @@ function Home() {
 
   return (
     <div className="home-background">
-      <div className="circle circle1" data-aos="fade-in"></div>
-      <div
-        className="circle circle2"
-        data-aos="fade-in"
-        data-aos-delay="200"
-      ></div>
-      <div
-        className="circle circle3"
-        data-aos="fade-in"
-        data-aos-delay="400"
-      ></div>
-      <div
-        className="circle circle4"
-        data-aos="fade-in"
-        data-aos-delay="600"
-      ></div>
-      <div
-        className="circle circle5"
-        data-aos="fade-in"
-        data-aos-delay="800"
-      ></div>
+      <div className="circle circle1" data-aos="fade-in" aria-hidden="true"></div>
+      <div className="circle circle2" data-aos="fade-in" data-aos-delay="200" aria-hidden="true"></div>
+      <div className="circle circle3" data-aos="fade-in" data-aos-delay="400" aria-hidden="true"></div>
+      <div className="circle circle4" data-aos="fade-in" data-aos-delay="600" aria-hidden="true"></div>
+      <div className="circle circle5" data-aos="fade-in" data-aos-delay="800" aria-hidden="true"></div>
 
-      {/* Hero Section */}
-      <div className="container text-white hero-section" data-aos="fade-up">
+      <section className="container text-white hero-section" data-aos="fade-up">
         <div className="row align-items-center min-vh-100">
-          <div
-            className="hero-copy col-md-6 order-on-mobile-2"
-            data-aos="fade-right"
-          >
+          <div className="hero-copy col-md-6 order-on-mobile-2" data-aos="fade-right">
             <h1>Empower Your Investment Journey</h1>
             <p className="lead">
-              Seamlessly track and manage your stock portfolio with our
-              intuitive dashboard.
+              Seamlessly track and manage your stock portfolio with our intuitive dashboard.
             </p>
             <Link to="/dashboard" className="btn btn-primary">
               Get Started
             </Link>
           </div>
-          <div
-            className="hero-img col-md-6 order-on-mobile-1"
-            data-aos="fade-left"
-          >
+          <div className="hero-img col-md-6 order-on-mobile-1" data-aos="fade-left">
             <img
               src={dashboardImage}
-              alt="Dashboard Preview"
+              alt="Preview of the investment dashboard showing a portfolio table and a distribution chart"
               className="hero-img img-fluid"
             />
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Features Section */}
-      <div className="features-section container text-white" data-aos="fade-up">
+      <section className="features-section container text-white" data-aos="fade-up">
         <div className="row align-items-center">
-          {/* Feature 1 */}
           <div className="col-md-6 feature" data-aos="fade-right">
             <img
               src={realTimeImage}
-              alt="Real-Time Stock Updates"
+              alt="Real-time stock updates"
               className="img-fluid"
               loading="lazy"
             />
           </div>
-          <div
-            className="col-md-6 feature mb-5 mb-md-0"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          >
-            <h3>Real-Time Stock Updates</h3>
+          <div className="col-md-6 feature mb-5 mb-md-0" data-aos="fade-left" data-aos-delay="200">
+            <h2 className="h3">Real-Time Stock Updates</h2>
             <p>
-              Keep your finger on the pulse of the market. Our platform pulls
-              live data directly from reliable APIs, ensuring that your stock
-              prices and portfolio values are always up to date.
+              Keep your finger on the pulse of the market. Our platform pulls live data directly
+              from reliable APIs, ensuring that your stock prices and portfolio values are always up
+              to date.
             </p>
           </div>
 
-          {/* Feature 2 */}
-          <div
-            className="col-md-6 feature order-on-mobile-2"
-            data-aos="fade-right"
-            data-aos-delay="400"
-          >
-            <h3>Effortless Portfolio Management</h3>
+          <div className="col-md-6 feature order-on-mobile-2" data-aos="fade-right" data-aos-delay="400">
+            <h2 className="h3">Effortless Portfolio Management</h2>
             <p>
-              Add, remove, and update your stocks with just a few clicks. Track
-              the number of shares, stock prices, and monitor the value of each
-              holding with ease.
+              Add, remove, and update your stocks with just a few clicks. Track the number of
+              shares, stock prices, and monitor the value of each holding with ease.
             </p>
           </div>
-          <div
-            className="col-md-6 feature order-on-mobile-1"
-            data-aos="fade-left"
-            data-aos-delay="600"
-          >
+          <div className="col-md-6 feature order-on-mobile-1" data-aos="fade-left" data-aos-delay="600">
             <img
               src={visualInsightsImage}
-              alt="Effortless Portfolio Management"
+              alt="Effortless portfolio management"
               className="img-fluid"
               loading="lazy"
             />
           </div>
 
-          {/* Feature 3 */}
-          <div
-            className="col-md-6 feature"
-            data-aos="fade-right"
-            data-aos-delay="800"
-          >
+          <div className="col-md-6 feature" data-aos="fade-right" data-aos-delay="800">
             <img
               src={portfolioManagementImage}
-              alt="Visual Insights at a Glance"
+              alt="Visual insights at a glance"
               className="img-fluid"
               loading="lazy"
             />
           </div>
-          <div
-            className="col-md-6 feature mb-5 mb-md-0"
-            data-aos="fade-left"
-            data-aos-delay="1000"
-          >
-            <h3>Visual Insights at a Glance</h3>
+          <div className="col-md-6 feature mb-5 mb-md-0" data-aos="fade-left" data-aos-delay="1000">
+            <h2 className="h3">Visual Insights at a Glance</h2>
             <p>
-              Get a clear view of your portfolio breakdown with a dynamic
-              circular diagram. Instantly see how each stock contributes to your
-              overall investment strategy.
+              Get a clear view of your portfolio breakdown with a dynamic circular diagram.
+              Instantly see how each stock contributes to your overall investment strategy.
             </p>
           </div>
 
-          {/* Feature 4 */}
-          <div
-            className="col-md-6 feature order-on-mobile-1 mb-5 mb-md-0"
-            data-aos="fade-right"
-            data-aos-delay="1200"
-          >
-            <h3>Personalized Investment Analysis</h3>
+          <div className="col-md-6 feature order-on-mobile-1 mb-5 mb-md-0" data-aos="fade-right" data-aos-delay="1200">
+            <h2 className="h3">Personalized Investment Analysis</h2>
             <p>
-              Monitor the percentage of each stock in your portfolio and make
-              adjustments to maintain balance or shift your strategy as market
-              conditions change.
+              Monitor the percentage of each stock in your portfolio and make adjustments to
+              maintain balance or shift your strategy as market conditions change.
             </p>
           </div>
-          <div
-            className="col-md-6 feature order-on-mobile-1"
-            data-aos="fade-left"
-            data-aos-delay="1400"
-          >
+          <div className="col-md-6 feature order-on-mobile-1" data-aos="fade-left" data-aos-delay="1400">
             <img
               src={investmentAnalysis}
-              alt="Personalized Investment Analysis"
+              alt="Personalized investment analysis"
               className="img-fluid"
               loading="lazy"
             />
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Q&A Section */}
-      <div className="faq-section container text-white" data-aos="fade-up">
+      <section className="faq-section container text-white" data-aos="fade-up">
         <h2 className="text-center mb-4">Frequently Asked Questions</h2>
         <div className="accordion w-75" id="faqAccordion">
-          {/* Question 1 */}
-          <div
-            className="accordion-item"
-            data-aos="fade-up"
-            data-aos-delay="1600"
-          >
-            <h2 className="accordion-header" id="headingOne">
+          <div className="accordion-item" data-aos="fade-up" data-aos-delay="1600">
+            <h3 className="accordion-header" id="headingOne">
               <button
                 className="accordion-button collapsed"
                 type="button"
@@ -197,7 +131,7 @@ function Home() {
               >
                 How do I add stocks to my portfolio?
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseOne"
               className="accordion-collapse collapse"
@@ -205,19 +139,14 @@ function Home() {
               data-bs-parent="#faqAccordion"
             >
               <div className="accordion-body">
-                Use our search feature to find stocks by ticker symbol and add
-                them to your portfolio.
+                Use our search feature to find stocks by ticker symbol and add them to your
+                portfolio.
               </div>
             </div>
           </div>
 
-          {/* Question 2 */}
-          <div
-            className="accordion-item"
-            data-aos="fade-up"
-            data-aos-delay="1800"
-          >
-            <h2 className="accordion-header" id="headingTwo">
+          <div className="accordion-item" data-aos="fade-up" data-aos-delay="1800">
+            <h3 className="accordion-header" id="headingTwo">
               <button
                 className="accordion-button collapsed"
                 type="button"
@@ -228,7 +157,7 @@ function Home() {
               >
                 How does the platform calculate the value of my portfolio?
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseTwo"
               className="accordion-collapse collapse"
@@ -236,20 +165,14 @@ function Home() {
               data-bs-parent="#faqAccordion"
             >
               <div className="accordion-body">
-                The value of your portfolio is calculated based on the current
-                stock prices from our integrated API and the amount of each
-                stock in your portfolio.
+                The value of your portfolio is calculated based on the current stock prices from our
+                integrated API and the amount of each stock in your portfolio.
               </div>
             </div>
           </div>
 
-          {/* Question 3 */}
-          <div
-            className="accordion-item"
-            data-aos="fade-up"
-            data-aos-delay="2000"
-          >
-            <h2 className="accordion-header" id="headingThree">
+          <div className="accordion-item" data-aos="fade-up" data-aos-delay="2000">
+            <h3 className="accordion-header" id="headingThree">
               <button
                 className="accordion-button collapsed"
                 type="button"
@@ -260,7 +183,7 @@ function Home() {
               >
                 Can I update the number of shares for a stock in my portfolio?
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseThree"
               className="accordion-collapse collapse"
@@ -268,20 +191,14 @@ function Home() {
               data-bs-parent="#faqAccordion"
             >
               <div className="accordion-body">
-                Yes, you can easily update the number of shares for any stock by
-                clicking on the stock in the table and adjusting the share
-                amount.
+                Yes, you can easily update the number of shares for any stock by changing the value
+                in the quantity field in the table.
               </div>
             </div>
           </div>
 
-          {/* Question 4 */}
-          <div
-            className="accordion-item"
-            data-aos="fade-up"
-            data-aos-delay="2200"
-          >
-            <h2 className="accordion-header" id="headingFour">
+          <div className="accordion-item" data-aos="fade-up" data-aos-delay="2200">
+            <h3 className="accordion-header" id="headingFour">
               <button
                 className="accordion-button collapsed"
                 type="button"
@@ -292,7 +209,7 @@ function Home() {
               >
                 Is the stock data live?
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseFour"
               className="accordion-collapse collapse"
@@ -300,20 +217,14 @@ function Home() {
               data-bs-parent="#faqAccordion"
             >
               <div className="accordion-body">
-                Yes, we provide real-time stock data by pulling information
-                directly from a reliable market API to ensure your portfolio
-                reflects the most current market prices.
+                Yes, we provide real-time stock data by pulling information directly from a reliable
+                market API to ensure your portfolio reflects the most current market prices.
               </div>
             </div>
           </div>
 
-          {/* Question 5 */}
-          <div
-            className="accordion-item"
-            data-aos="fade-up"
-            data-aos-delay="2400"
-          >
-            <h2 className="accordion-header" id="headingFive">
+          <div className="accordion-item" data-aos="fade-up" data-aos-delay="2400">
+            <h3 className="accordion-header" id="headingFive">
               <button
                 className="accordion-button collapsed"
                 type="button"
@@ -324,7 +235,7 @@ function Home() {
               >
                 How do I visualize my portfolio's breakdown?
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseFive"
               className="accordion-collapse collapse"
@@ -332,20 +243,14 @@ function Home() {
               data-bs-parent="#faqAccordion"
             >
               <div className="accordion-body">
-                The circular diagram on the right side of the dashboard shows
-                the percentage each stock contributes to your overall portfolio,
-                giving you a quick visual reference.
+                The circular diagram on the right side of the dashboard shows the percentage each
+                stock contributes to your overall portfolio, giving you a quick visual reference.
               </div>
             </div>
           </div>
 
-          {/* Question 6 */}
-          <div
-            className="accordion-item"
-            data-aos="fade-up"
-            data-aos-delay="2600"
-          >
-            <h2 className="accordion-header" id="headingSix">
+          <div className="accordion-item" data-aos="fade-up" data-aos-delay="2600">
+            <h3 className="accordion-header" id="headingSix">
               <button
                 className="accordion-button collapsed"
                 type="button"
@@ -356,7 +261,7 @@ function Home() {
               >
                 Can I remove stocks from my portfolio?
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseSix"
               className="accordion-collapse collapse"
@@ -364,32 +269,26 @@ function Home() {
               data-bs-parent="#faqAccordion"
             >
               <div className="accordion-body">
-                Yes, you can remove any stock by selecting it in the table and
-                clicking the "Remove" button, which will delete it from your
-                portfolio view.
+                Yes, you can remove any stock by clicking the "Remove" button in its row, which will
+                delete it from your portfolio view.
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Call to Action section - I have to add some information here later */}
-      <div
-        className="cta-section container text-center text-white"
-        data-aos="fade-up"
-      >
+      <section className="cta-section container text-center text-white" data-aos="fade-up">
         <h2>Ready to Transform Your Investment Strategy?</h2>
         <p>Join us today and take control of your financial future.</p>
         <Link to="/dashboard" className="btn btn-primary btn-lg">
           Access Your Dashboard
         </Link>
-      </div>
+      </section>
 
-      {/* Footer */}
       <footer className="footer mb-4" data-aos="fade-up">
         <div className="d-flex justify-content-between align-items-center mx-4">
           <a href="#top" className="btn btn-link">
-            <i className="bi bi-arrow-up-circle-fill"></i> Back to Top
+            <i className="bi bi-arrow-up-circle-fill" aria-hidden="true"></i> Back to Top
           </a>
           <ul className="list-inline mb-0">
             <li className="list-inline-item">
