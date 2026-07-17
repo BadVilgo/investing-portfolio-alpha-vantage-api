@@ -5,7 +5,7 @@ add them to your watchlist, adjust holdings, and see your portfolio allocation u
 interactive chart. Prices come from a live market data API and each user's portfolio is stored in
 their own account.
 
-**Live demo:** https://badvilgo.github.io/investing-portfolio-alpha-vantage-api/
+**Live demo:** https://badvilgo.github.io/investing-portfolio-2/
 
 > Demo login: `test@test.com` / `test.com`
 
