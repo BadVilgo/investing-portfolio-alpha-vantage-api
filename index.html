@@ -7,6 +7,21 @@
     <link rel="apple-touch-icon" href="/investing-portfolio-2/logo192.png" />
     <link rel="manifest" href="/investing-portfolio-2/manifest.json" />
     <meta name="theme-color" content="#0d6efd" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        var theme = localStorage.getItem("theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-bs-theme", theme);
+      })();
+    </script>
 
     <title>Stock Dashboard - Track and Manage Your Investment Portfolio</title>
     <meta
@@ -32,8 +47,8 @@
       content="Track and manage your stock portfolio in real time. Search stocks, build a watchlist, and visualise your portfolio allocation with a live dashboard."
     />
     <meta name="twitter:image" content="/logo512.png" />
-    <script type="module" crossorigin src="/investing-portfolio-2/assets/index-B8mkOtA2.js"></script>
-    <link rel="stylesheet" crossorigin href="/investing-portfolio-2/assets/index-DIH-Zn4b.css">
+    <script type="module" crossorigin src="/investing-portfolio-2/assets/index-DhxhdK4Q.js"></script>
+    <link rel="stylesheet" crossorigin href="/investing-portfolio-2/assets/index-DUKGO9ko.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
