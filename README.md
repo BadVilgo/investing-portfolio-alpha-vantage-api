@@ -18,14 +18,24 @@ their own account.
 
 - Email and password authentication (sign up, log in, log out) via Supabase Auth
 - Protected dashboard route, accessible only to authenticated users
+- Summary metrics with animated count-up: total value, total gain / loss, today's change, and
+  largest position
+- Gain / loss per holding based on an editable buy price, colour-coded for profit and loss
+- Portfolio value history chart for the last 30 days, computed from daily closing prices
+- 30-day sparkline charts per holding, hand-drawn in SVG
+- Daily price change per holding from the Twelve Data quote endpoint
 - Live stock search with a debounced input to limit API calls
-- Real-time price lookups from the Twelve Data API
-- Add, remove, and update holdings, with portfolio value and allocation recalculated automatically
+- API rate-limit awareness: daily time-series data is cached in local storage for 24 hours and
+  refreshes are throttled to stay within the free tier
+- Add, remove (with undo), and update holdings, with allocation recalculated automatically
 - Per-user portfolio persistence in Supabase, with a local storage fallback if the database is
   unreachable
-- Interactive pie chart of portfolio distribution (Chart.js)
-- Loading and error states across data fetching and forms
-- Responsive layout (Bootstrap 5) with scroll animations (AOS)
+- Portfolio concentration indicator (informational only) and CSV export
+- Interactive doughnut chart of portfolio allocation with the total value in the centre
+- Light and dark mode with a navbar toggle, persisted across visits
+- Design tokens (CSS variables), skeleton loading states, and toast notifications
+- Responsive layout (Bootstrap 5) with scroll animations (AOS) that respect reduced-motion
+  preferences
 - Basic SEO (meta description, Open Graph and Twitter tags) and accessibility (skip link,
   labelled controls, semantic landmarks)
 
@@ -101,6 +111,9 @@ must match the repository name so that assets resolve correctly.
 
 - Migrating a legacy Create React App project to a modern Vite and TypeScript setup
 - Structuring an app into hooks, a data-access layer, and typed components
-- Working with a third-party REST API, including debouncing, error handling, and rate limits
+- Working with a third-party REST API, including debouncing, error handling, caching, and
+  staying within free-tier rate limits
 - Integrating authentication and a database with Row Level Security
+- Building a themeable UI with design tokens and a persisted light / dark mode
+- Drawing custom SVG visualisations (sparklines) and extending Chart.js
 - Writing unit tests for pure business logic

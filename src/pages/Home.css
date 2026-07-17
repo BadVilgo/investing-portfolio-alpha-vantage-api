@@ -1,31 +1,39 @@
 .home-background {
-  background: linear-gradient(to bottom, #065fe5, #01016b);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .hero-section {
-  padding: 5rem 0;
-  color: white;
+  position: relative;
+  z-index: 1;
+  padding: 4rem 0 2rem;
+}
+
+.hero-section .lead {
+  color: var(--app-muted);
 }
 
 .features-section,
-.faq-section {
-  min-height: 50vh;
+.faq-section,
+.cta-section {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 0;
 }
 
 .feature {
   margin-bottom: 3rem;
 }
 
+.feature p {
+  color: var(--app-muted);
+}
+
 .circle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
+  background-color: color-mix(in srgb, var(--accent) 7%, transparent);
   animation: move 20s infinite alternate;
   z-index: 0;
   pointer-events: none;
@@ -75,42 +83,56 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    animation: none;
+  }
+}
+
+.home-background img {
+  border: 1px solid var(--app-border);
+  border-radius: 12px;
+}
+
+.faq-section .accordion {
+  margin: 0 auto;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 0;
+}
+
 footer a {
-  color: #fff !important;
+  color: var(--app-text) !important;
   text-decoration: none !important;
 }
 
 footer a:hover {
-  color: #fff !important;
   text-decoration: underline !important;
 }
 
-.home-background img {
-  border: 2px solid #fff;
-  border-radius: 10px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-.accordion-body {
-  background-color: rgba(226, 226, 226, 0.313);
-}
-
 @media (max-width: 576px) {
+  .hero-section {
+    padding-top: 2rem;
+  }
+
   .order-on-mobile-1 {
     order: 1;
   }
+
   .order-on-mobile-2 {
     order: 2;
   }
-  .hero-img {
-    margin-top: -50px !important;
-  }
+
   .hero-copy {
-    margin-top: -440px !important;
-    margin-left: 10px !important;
+    margin-top: 1.5rem;
+    text-align: center;
   }
+
   .feature {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
   }
 }

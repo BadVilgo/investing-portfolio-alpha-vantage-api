@@ -15,6 +15,7 @@ function Home() {
       duration: 750,
       once: true,
       mirror: false,
+      disable: () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
     });
   }, []);
 
@@ -26,7 +27,7 @@ function Home() {
       <div className="circle circle4" data-aos="fade-in" data-aos-delay="600" aria-hidden="true"></div>
       <div className="circle circle5" data-aos="fade-in" data-aos-delay="800" aria-hidden="true"></div>
 
-      <section className="container text-white hero-section" data-aos="fade-up">
+      <section className="container hero-section" data-aos="fade-up">
         <div className="row align-items-center min-vh-100">
           <div className="hero-copy col-md-6 order-on-mobile-2" data-aos="fade-right">
             <h1>Empower Your Investment Journey</h1>
@@ -47,7 +48,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="features-section container text-white" data-aos="fade-up">
+      <section className="features-section container" data-aos="fade-up">
         <div className="row align-items-center">
           <div className="col-md-6 feature" data-aos="fade-right">
             <img
@@ -116,7 +117,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="faq-section container text-white" data-aos="fade-up">
+      <section className="faq-section container" data-aos="fade-up">
         <h2 className="text-center mb-4">Frequently Asked Questions</h2>
         <div className="accordion w-75" id="faqAccordion">
           <div className="accordion-item" data-aos="fade-up" data-aos-delay="1600">
@@ -277,7 +278,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="cta-section container text-center text-white" data-aos="fade-up">
+      <section className="cta-section container text-center" data-aos="fade-up">
         <h2>Ready to Transform Your Investment Strategy?</h2>
         <p>Join us today and take control of your financial future.</p>
         <Link to="/dashboard" className="btn btn-primary btn-lg">

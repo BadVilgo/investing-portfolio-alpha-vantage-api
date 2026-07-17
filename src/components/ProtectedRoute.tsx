@@ -12,7 +12,7 @@ function ProtectedRoute({ children }: ProtectedRouteProps) {
   if (loading) {
     return (
       <div className="dashboard-background">
-        <div className="container py-5 text-white text-center" role="status" aria-live="polite">
+        <div className="container py-5 text-center" role="status" aria-live="polite">
           <div className="spinner-border" aria-hidden="true"></div>
           <p className="mt-3">Loading your dashboard...</p>
         </div>

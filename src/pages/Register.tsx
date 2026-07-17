@@ -50,7 +50,7 @@ function Register() {
             {message}
           </p>
         )}
-        <form onSubmit={handleRegister} className="mx-auto" style={{ maxWidth: "400px" }}>
+        <form onSubmit={handleRegister} className="app-card p-4 mx-auto mt-4" style={{ maxWidth: "400px" }}>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email address

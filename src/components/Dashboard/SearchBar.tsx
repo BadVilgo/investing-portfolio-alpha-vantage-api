@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import type { Stock, SymbolSearchResult } from "../../types";
-import { fetchPrice, searchSymbols } from "../../lib/twelveData";
+import type { Quote, Stock, SymbolSearchResult } from "../../types";
+import { fetchQuotes, searchSymbols } from "../../lib/twelveData";
 import { useDebounce } from "../../hooks/useDebounce";
 
 interface SearchBarProps {
-  onAddStock: (stock: Stock) => void;
+  onAddStock: (stock: Stock, quote: Quote) => void;
 }
 
 function SearchBar({ onAddStock }: SearchBarProps) {
@@ -54,15 +54,24 @@ function SearchBar({ onAddStock }: SearchBarProps) {
     const name = selected.instrument_name || selected.name || symbol;
 
     try {
-      const price = await fetchPrice(symbol);
-      onAddStock({
-        ticker: symbol,
-        name,
-        price,
-        quantity: 0,
-        value: 0,
-        percentage: 0,
-      });
+      const quotes = await fetchQuotes([symbol]);
+      const quote = quotes[symbol];
+      if (!quote) {
+        setError("Could not load a price for this stock. Please try again.");
+        return;
+      }
+      onAddStock(
+        {
+          ticker: symbol,
+          name,
+          price: quote.close,
+          avgCost: quote.close,
+          quantity: 0,
+          value: 0,
+          percentage: 0,
+        },
+        quote
+      );
       setSearchTerm("");
       setSearchResults([]);
     } catch {
@@ -71,43 +80,38 @@ function SearchBar({ onAddStock }: SearchBarProps) {
   };
 
   return (
-    <div className="w-100 bg-white shadow rounded-2">
-      <div className="input-group mb-3 w-100">
-        <label htmlFor="stock-search" className="visually-hidden">
-          Search stocks by name or ticker
-        </label>
-        <input
-          id="stock-search"
-          type="text"
-          className="form-control"
-          placeholder="Search by name or ticker..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          autoComplete="off"
-          aria-describedby="stock-search-status"
-        />
-      </div>
+    <div className="searchbar position-relative mb-3">
+      <label htmlFor="stock-search" className="visually-hidden">
+        Search stocks by name or ticker
+      </label>
+      <input
+        id="stock-search"
+        type="text"
+        className="form-control"
+        placeholder="Search by name or ticker..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        autoComplete="off"
+        aria-describedby="stock-search-status"
+      />
 
       <p id="stock-search-status" className="visually-hidden" role="status" aria-live="polite">
         {loading ? "Searching" : `${searchResults.length} results available`}
       </p>
 
-      {loading && <p className="text-muted small px-1">Searching...</p>}
+      {loading && <p className="text-app-muted small mt-1 mb-0">Searching...</p>}
       {error && (
-        <p className="text-danger small px-1" role="alert">
+        <p className="text-loss small mt-1 mb-0" role="alert">
           {error}
         </p>
       )}
 
       {searchResults.length > 0 && (
-        <ul
-          className="list-group mb-3 border z-3 position-absolute"
-          style={{ maxHeight: "200px", overflowY: "auto", maxWidth: "90vw" }}
-        >
+        <ul className="list-group search-results position-absolute z-3 shadow">
           {searchResults.map((result) => (
             <li key={`${result.symbol}-${result.exchange ?? ""}`} className="list-group-item">
-              <div className="d-flex justify-content-between align-items-center">
-                <span>
+              <div className="d-flex justify-content-between align-items-center gap-2">
+                <span className="text-truncate">
                   {result.symbol} - {result.instrument_name || result.name}
                 </span>
                 <button

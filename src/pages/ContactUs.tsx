@@ -12,7 +12,7 @@ function ContactUs() {
         <form
           action="https://formspree.io/f/xkgnnanr"
           method="POST"
-          className="mx-auto w-75"
+          className="app-card p-4 mx-auto w-100"
           style={{ maxWidth: "600px" }}
         >
           <div className="mb-3">

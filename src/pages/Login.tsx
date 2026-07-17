@@ -39,7 +39,7 @@ function Login() {
             {error}
           </p>
         )}
-        <form onSubmit={handleLogin} className="mx-auto" style={{ maxWidth: "400px" }}>
+        <form onSubmit={handleLogin} className="app-card p-4 mx-auto mt-4" style={{ maxWidth: "400px" }}>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email address
@@ -54,7 +54,7 @@ function Login() {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <div className="form-text text-white">Use "test@test.com" for demo access.</div>
+            <div className="form-text">Use "test@test.com" for demo access.</div>
           </div>
           <div className="mb-3">
             <label htmlFor="password" className="form-label">
@@ -70,7 +70,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <div className="form-text text-white">Use "test.com" as the password.</div>
+            <div className="form-text">Use "test.com" as the password.</div>
           </div>
           <button type="submit" className="btn btn-primary w-100" disabled={loading}>
             {loading ? "Logging in..." : "Login"}

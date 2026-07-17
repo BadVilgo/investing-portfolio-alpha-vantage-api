@@ -1,26 +1,29 @@
-.navbar .nav-link {
-  color: rgba(0, 0, 0, 0.9) !important;
+.app-navbar {
+  background-color: var(--app-surface);
+  border-bottom: 1px solid var(--app-border);
 }
 
-.navbar .nav-link:hover {
-  color: #0e0eb8 !important;
-  cursor: pointer;
+.app-navbar .navbar-brand {
+  font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .navbar-brand {
-    margin-left: 3%;
-  }
-  .navbar-nav {
-    width: 100%;
-    justify-content: flex-end;
-  }
-  .nav-item {
-    width: 100%;
+.app-navbar .nav-link:hover {
+  color: var(--accent);
+}
+
+.theme-toggle {
+  border-color: var(--app-border);
+  color: var(--app-text);
+}
+
+.theme-toggle:hover {
+  background-color: var(--app-surface-2);
+  border-color: var(--app-border);
+  color: var(--app-text);
+}
+
+@media (max-width: 991px) {
+  .app-navbar .nav-item {
     text-align: right;
-    align-items: right;
-  }
-  .nav-link {
-    margin-right: 10px;
   }
 }
