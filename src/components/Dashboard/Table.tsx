@@ -284,7 +284,7 @@ function Table({ userId, onDataChange }: TableProps) {
                 <th scope="col">Holding</th>
                 <th scope="col" className="text-end">Price</th>
                 <th scope="col" className="text-end">Day</th>
-                <th scope="col" className="text-center">30 days</th>
+                <th scope="col" className="text-center d-none d-sm-table-cell">30 days</th>
                 <th scope="col">Qty</th>
                 <th scope="col">Buy price</th>
                 <th scope="col" className="text-end">Value</th>
@@ -312,7 +312,7 @@ function Table({ userId, onDataChange }: TableProps) {
                     <td className={`text-end small ${quote ? (quote.percentChange >= 0 ? "text-gain" : "text-loss") : "text-app-muted"}`}>
                       {quote ? formatSignedPercent(quote.percentChange, 1) : "-"}
                     </td>
-                    <td className="text-center">
+                    <td className="text-center d-none d-sm-table-cell">
                       <Sparkline
                         values={series[row.ticker] ?? []}
                         label={`${row.ticker} price trend over the last 30 days`}

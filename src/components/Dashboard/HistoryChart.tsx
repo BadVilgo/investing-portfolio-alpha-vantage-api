@@ -81,13 +81,19 @@ function HistoryChart({ history }: HistoryChartProps) {
 
   return (
     <div className="app-card mb-4">
-      <div className="d-flex justify-content-between align-items-baseline mb-2">
+      <div className="d-flex flex-wrap justify-content-between align-items-baseline gap-2 mb-2">
         <span className="small text-app-muted">Value of current holdings, last 30 days</span>
         <span className={`small fw-semibold tabular-nums ${rising ? "text-gain" : "text-loss"}`}>
           {formatSignedPercent(changePercent, 1)}
         </span>
       </div>
-      <div className="history-chart">
+      <div
+        className="history-chart"
+        role="img"
+        aria-label={`Line chart of portfolio value over the last ${history.length} days, ${
+          rising ? "up" : "down"
+        } ${Math.abs(changePercent).toFixed(1)} percent overall`}
+      >
         <Line data={data} options={options} />
       </div>
     </div>

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabaseClient";
+import { usePageMeta } from "../hooks/usePageMeta";
 import "./Dashboard.css";
 
 function Register() {
+  usePageMeta("Create Account - Stock Dashboard");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");

@@ -7,9 +7,11 @@ import ConcentrationCard from "../components/Dashboard/ConcentrationCard";
 import type { PortfolioSnapshot } from "../types";
 import { buildHistory, concentration } from "../lib/portfolio";
 import { useAuth } from "../hooks/useAuth";
+import { usePageMeta } from "../hooks/usePageMeta";
 import "./Dashboard.css";
 
 function Dashboard() {
+  usePageMeta("Your Dashboard - Stock Dashboard");
   const { user } = useAuth();
   const [snapshot, setSnapshot] = useState<PortfolioSnapshot | null>(null);
 

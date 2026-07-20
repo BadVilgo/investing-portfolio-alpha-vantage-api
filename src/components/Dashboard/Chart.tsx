@@ -84,7 +84,17 @@ function Chart({ tickers, percentages, totalValue }: ChartProps) {
   return (
     <div className="app-card">
       <h2 className="h6 mb-3">Allocation</h2>
-      <div className="chart-pie">
+      <div
+        className="chart-pie"
+        role="img"
+        aria-label={
+          tickers.length
+            ? `Doughnut chart of portfolio allocation: ${tickers
+                .map((ticker, index) => `${ticker} ${percentages[index]} percent`)
+                .join(", ")}`
+            : "Doughnut chart of portfolio allocation, no holdings yet"
+        }
+      >
         <Doughnut
           key={`${theme}-${totalValue.toFixed(2)}`}
           data={data}

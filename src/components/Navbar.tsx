@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logout from "./Logout";
 import ThemeToggle from "./ThemeToggle";
 import { useAuth } from "../hooks/useAuth";
@@ -40,33 +40,33 @@ function Navbar() {
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav ms-auto me-lg-3">
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={closeMenu}>
+              <NavLink className="nav-link" to="/" end onClick={closeMenu}>
                 Home
-              </Link>
+              </NavLink>
             </li>
             {user && (
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard" onClick={closeMenu}>
+                <NavLink className="nav-link" to="/dashboard" onClick={closeMenu}>
                   Dashboard
-                </Link>
+                </NavLink>
               </li>
             )}
             <li className="nav-item">
-              <Link className="nav-link" to="/contact" onClick={closeMenu}>
+              <NavLink className="nav-link" to="/contact" onClick={closeMenu}>
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
             {!user ? (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/login" onClick={closeMenu}>
+                  <NavLink className="nav-link" to="/login" onClick={closeMenu}>
                     Login
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/register" onClick={closeMenu}>
+                  <NavLink className="nav-link" to="/register" onClick={closeMenu}>
                     Register
-                  </Link>
+                  </NavLink>
                 </li>
               </>
             ) : (

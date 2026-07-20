@@ -1,6 +1,8 @@
+import { usePageMeta } from "../hooks/usePageMeta";
 import "./Dashboard.css";
 
 function ContactUs() {
+  usePageMeta("Contact - Stock Dashboard");
   return (
     <div className="dashboard-background">
       <div className="container py-5">

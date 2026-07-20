@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "../lib/supabaseClient";
+import { usePageMeta } from "../hooks/usePageMeta";
 import "./Dashboard.css";
 
 function Login() {
+  usePageMeta("Login - Stock Dashboard");
   const [email, setEmail] = useState("test@test.com");
   const [password, setPassword] = useState("test.com");
   const [error, setError] = useState("");

@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Home.css";
 import { useCountUp } from "../hooks/useCountUp";
+import { usePageMeta } from "../hooks/usePageMeta";
 import { formatCurrency } from "../lib/format";
 
 const HERO_SPARK_POINTS = "0,40 20,36 40,38 60,30 80,33 100,24 120,27 140,18 160,22 180,12 200,15 220,6";
@@ -87,6 +88,11 @@ function HeroCard() {
 }
 
 function Home() {
+  usePageMeta(
+    "Stock Dashboard - Track and Manage Your Investment Portfolio",
+    "Track and manage your stock portfolio in real time. Live prices, gain and loss per holding, and a clear view of your allocation. Free demo, no signup."
+  );
+
   useEffect(() => {
     AOS.init({
       duration: 750,
@@ -356,7 +362,7 @@ function Home() {
       </section>
 
       <footer className="footer" data-aos="fade-up">
-        <div className="d-flex justify-content-between align-items-center mx-4">
+        <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 mx-4">
           <a href="#top" className="btn btn-link">
             <i className="bi bi-arrow-up-circle-fill" aria-hidden="true"></i> Back to Top
           </a>

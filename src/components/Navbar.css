@@ -11,6 +11,11 @@
   color: var(--accent);
 }
 
+.app-navbar .nav-link.active {
+  color: var(--accent);
+  font-weight: 500;
+}
+
 .theme-toggle {
   border-color: var(--app-border);
   color: var(--app-text);
@@ -24,6 +29,11 @@
 
 @media (max-width: 991px) {
   .app-navbar .nav-item {
+    text-align: right;
+  }
+
+  .app-navbar .navbar-nav button.nav-link {
+    width: 100%;
     text-align: right;
   }
 }
